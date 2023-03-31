@@ -1,6 +1,30 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.current-player {
+    display: flex;
+}
+
+.current-player div {
+    display: flex;
+    align-items: center;
+    margin: 32px;
+    font-size: 32px;
+}
+
+.current-player img {
+    width: 80px;
+    height: 80px;
+    margin: 16px;
+}
+
+.player-inactive {
+    opacity: 0.3;
 }
 
 table {
@@ -8,7 +32,7 @@ table {
 }
 
 tr {
-    width: 399px;
+    max-width: 399px;
 }
 
 td {
@@ -16,6 +40,11 @@ td {
     width: 133px;
     height: 133px;
     border: 5px solid #000;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(189, 138, 0, 0.2);
 }
 
 tr:first-child td {
@@ -48,4 +77,8 @@ tr td:last-child {
 .shape {
     width: 80px;
     height: 80px;
+}
+
+.hide {
+    display: none;
 }

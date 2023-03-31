@@ -11,50 +11,62 @@
 </head>
 
 <body>
+
+    <div class="current-player">
+        <div id="player1" class="player-1">
+            <img src="./img/circle.ico"><b>Player One</b>
+        </div>
+        <div id="player2" class="player-2 player-inactive">
+            <img src="./img/cross.ico"><b>Player Two</b>
+        </div>
+    </div>
+
     <table>
         <tr>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
+            <td onclick="logShape(0)">
+                <div class="shape-container"><img id="circle-0" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-0" class="shape hide" src="./img/cross.ico"></div>
             </td>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
+            <td onclick="logShape(1)">
+                <div class="shape-container"><img id="circle-1" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-1" class="shape hide" src="./img/cross.ico"></div>
             </td>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
-            </td>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
-            </td>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
+            <td onclick="logShape(2)">
+                <div class="shape-container"><img id="circle-2" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-2" class="shape hide" src="./img/cross.ico"></div>
             </td>
         </tr>
         <tr>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
+            <td onclick="logShape(3)">
+                <div class="shape-container"><img id="circle-3" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-3" class="shape hide" src="./img/cross.ico"></div>
             </td>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
+            <td onclick="logShape(4)">
+                <div class="shape-container"><img id="circle-4" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-4" class="shape hide" src="./img/cross.ico"></div>
             </td>
-            <td>
-                <div class="shape-container"><img class="shape" src="./img/circle.ico"></div>
-                <div class="shape-container"><img class="shape" src="./img/cross.ico"></div>
+            <td onclick="logShape(5)">
+                <div class="shape-container"><img id="circle-5" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-5" class="shape hide" src="./img/cross.ico"></div>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="logShape(6)">
+                <div class="shape-container"><img id="circle-6" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-6" class="shape hide" src="./img/cross.ico"></div>
+            </td>
+            <td onclick="logShape(7)">
+                <div class="shape-container"><img id="circle-7" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-7" class="shape hide" src="./img/cross.ico"></div>
+            </td>
+            <td onclick="logShape(8)">
+                <div class="shape-container"><img id="circle-8" class="shape hide" src="./img/circle.ico"></div>
+                <div class="shape-container"><img id="cross-8" class="shape hide" src="./img/cross.ico"></div>
             </td>
         </tr>
     </table>
+
+    
 </body>
 
 </html>
