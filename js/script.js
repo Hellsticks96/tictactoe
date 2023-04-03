@@ -2,8 +2,10 @@ let fieldstatus = [];
 
 let shapestatus = 'cross';
 
+let gameover = false;
+
 function logShape(i) {
-    if (!fieldstatus[i]) {
+    if (!fieldstatus[i] && !gameover) {
         if (shapestatus == 'cross') {
             shapestatus = 'circle';
             document.getElementById(`circle-${i}`).classList.remove('hide');
@@ -39,23 +41,35 @@ function checkForThree(a, b, c) {
 
     if (fieldstatus[a] == fieldstatus[b] && fieldstatus[b] == fieldstatus[c] && fieldstatus[a]) {
         console.log('Winner: ' + fieldstatus[a]);
-    
+        gameover = true;
+        endScreen();
         if(winline.getAttribute('style').indexOf('transform: rotate(-45deg)') != -1){
             console.log('dia-neg');
             winline.style.transform = 'rotate(-45deg) scaleX(1)';
+
         }else{
             if(winline.getAttribute('style').indexOf('transform:') != -1){
                 console.log('diagonal');
                 winline.style.transform = 'rotate(45deg) scaleX(1)';
+
             }else{
                 if(winline.classList.contains('make-vertical')){
                     console.log('vertical');
                     winline.style.transform = 'rotate(90deg) scaleX(1)';
+
                 }else {
                     console.log('horizontal');
                     winline.style.transform = 'scaleX(1)';
+                    
                 }
             }
         }   
     }
+}
+
+function endScreen(){
+    setTimeout(function(){
+        document.getElementById('gameover').classList.remove('hide');
+        document.getElementById('restartbutton').classList.remove('hide');
+    }, 1000);
 }
